@@ -17,11 +17,16 @@ describe('GitUserSearch Controller', function() {
     beforeEach(inject(function($httpBackend) {
       httpBackend = $httpBackend;
       httpBackend
-      .when('GET', 'https://api.github.com/search/users?q=tansaku')
+      .expectGET('https://api.github.com/search/users?q=tansaku')
       .respond(
         { items: items }
       );
     }));
+
+    afterEach(function() {
+      httpBackend.verifyNoOutstandingExpectation();
+      httpBackend.verifyNoOutstandingRequest();
+    });
 
     var items = [
       {
