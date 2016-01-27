@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Github user search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
     <script src="bower_components/jquery/dist/jquery.js" ></script>
     <script src="bower_components/angular/angular.js" ></script>
     <script src="bower_components/angular-resource/angular-resource.js" ></script>
@@ -12,14 +13,15 @@
     <script src="js/searchFactory.js"></script>
   </head>
   <body ng-controller="GitUserSearchController as searchCtrl">
-    <div>
+    <div class="container">
       <form class="form-horizontal">
         <input type="text" ng-model="searchCtrl.searchTerm" ng-change="searchCtrl.doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }">
         <button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
+        <p>You are looking for: <strong>{{ searchCtrl.searchTerm }}</strong></p>
       </form>
       <ul class="list-group">
-        <li ng-repeat="user in searchCtrl.searchResult.items">
-          <img ng-src="{{user.avatar_url}}" width="100">
+        <li class="list-group-item" ng-repeat="user in searchCtrl.searchResult.items">
+          <img ng-src="{{user.avatar_url}}">
           <a ng-href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
