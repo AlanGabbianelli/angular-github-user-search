@@ -14,7 +14,12 @@ describe('Github Profile finder', function() {
 
   it('finds profiles', function() {
     searchBox.sendKeys('spike');
-    searchButton.click();
     expect(profiles.getText()).toContain('spike01');
+  });
+
+  it('clear the page when the search box is cleared', function() {
+    searchBox.sendKeys('spike');
+    searchBox.clear();
+    expect(element(by.className('list-group')).isDisplayed()).toBe(false);
   });
 });
