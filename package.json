@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
-  "author": "",
+  "author": "Alan Gabbianelli",
   "license": "ISC",
   "devDependencies": {
     "jasmine-core": "^2.4.1",
@@ -16,9 +17,14 @@
     "karma-jasmine": "^0.3.6",
     "karma-phantomjs-launcher": "^0.2.3",
     "phantomjs": "^1.9.19",
-    "protractor": "^3.0.0"
+    "protractor": "^3.0.0",
+    "http-server": "^0.8.5"
   },
   "dependencies": {
-    "http-server": "^0.8.5"
+    "bower": "^1.7.2",
+    "express": "^4.13.3"
+  },
+  "engines": {
+    "node": "^5.5.0"
   }
 }
