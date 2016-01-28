@@ -7,7 +7,7 @@ Learning Angular
 Screenshots
 -----------
 ![Alt text](screenshot_1.png)
-![Alt text](screenshot_1.png)
+![Alt text](screenshot_2.png)
 
 Try it online
 -------------
