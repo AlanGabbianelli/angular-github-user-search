@@ -20,7 +20,6 @@ $ cd angular-github
 $ npm install
 $ open index.html
 ```
-Visit: [http://localhost:8080](http://localhost:8080) on your computer.
 
 Technologies
 -------------
