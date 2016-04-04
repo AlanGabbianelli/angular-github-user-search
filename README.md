@@ -16,7 +16,7 @@ Try it locally
 --------------
 ```
 $ git clone git@github.com:AlanGabbianelli/angular-github-user-search.git
-$ cd angular-github
+$ cd angular-github-user-search
 $ npm install
 $ open index.html
 ```
