@@ -20,6 +20,7 @@ $ cd angular-github-user-search
 $ npm install
 $ open index.html
 ```
+If you use Linux and `open index.html` doesn't work, try with `xdg-open index.html` or `firefox index.html`.
 
 Technologies
 -------------
